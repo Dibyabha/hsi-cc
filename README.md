@@ -14,8 +14,6 @@ r_{XY} = \frac{\sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^{
 
 where Xi and Yi are the individual samples and $$ \bar{X} $$ and $$ \bar{Y} $$ are the mean values of variables X and Y respectively, and n is the number of samples (pixels) in each variable (or band) after pre-processing. The band correlation data was stored as a matrix for future access. Subsequently, Average Band Correlation (ABC) is computed. The ABC for band i is defined as the mean of the absolute correlation of band i (Bi) with band j (Bj ), where j varies from 1 to N and $$ \(j \neq i\) $$.\
 
-$$
-\text{ABC}_i = \frac{1}{N-1} \sum_{j=1, j \neq i}^{N} \left| r_{B_i, B_j} \right| (2)
-$$
+![Formula](https://latex.codecogs.com/png.image?\dpi{110}\text{ABC}_i=\frac{1}{N-1}\sum_{j=1,j\neq&space;i}^{N}\left|r_{B_i,B_j}\right|)
 
 where r(Bi, Bj ) represents the correlation coefficient between Bi and Bj , and | · | denotes the absolute value. This process is repeated for each Bi, where i ∈ {1, . . . , N }. We experimentally set a threshold of 0.65 for the average band correlation (ABC). Bands with ABC less than the threshold were selected and, these selected bands were then extracted from the datasets. This approach allowed us to isolate and retain bands that exhibited lower inter-band dependencies, ensuring that the retained bands provided diverse and nonredundant information.
