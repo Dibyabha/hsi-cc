@@ -6,12 +6,16 @@ Hyperspectral images offer extensive spectral information about ground objects a
 lower inter-band dependencies, ensuring that the selected bands provide diverse and non-redundant information. We evaluate our proposed approach on two standard benchmark datasets: Pavia University (PA) and Salinas Valley (SA), focusing on image classification tasks. The experimental results demonstrate that our method performs competitively with other standard band selection approaches.
 
 # Methodology
-The proposed work computes band correlation using Correlation Coefficient (CC) to determine the relationships between different spectral bands of the datasets. This metric was chosen to quantify the inter-band dependencies of the benchmark datasets. CC quantifies the linear relationship between two variables (or bands in our study) and describes how they move in relation to each other. It ranges from -1 to 1, where -1 indicates a perfect negative correlation (as one variable increases, the other decreases), and 1 indicates a perfect positive correlation (as one variable increases, the other also increases). Mathematically, CC can be represented as $r_{XY}$ where X and Y are the two variables (or bands) and can be formulated as
-$$
+The proposed work computes band correlation using Correlation Coefficient (CC) to determine the relationships between different spectral bands of the datasets. This metric was chosen to quantify the inter-band dependencies of the benchmark datasets. CC quantifies the linear relationship between two variables (or bands in our study) and describes how they move in relation to each other. It ranges from -1 to 1, where -1 indicates a perfect negative correlation (as one variable increases, the other decreases), and 1 indicates a perfect positive correlation (as one variable increases, the other also increases). Mathematically, CC can be represented as $r_{XY}$ where X and Y are the two variables (or bands) and can be formulated as\
+
+'''math
 r_{XY} = \frac{\sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^{n} (X_i - \bar{X})^2\sum_{i=1}^{n} (Y_i - \bar{Y})^2}}  (1)
-$$
-where Xi and Yi are the individual samples and $$ \bar{X} $$ and $$ \bar{Y} $$ are the mean values of variables X and Y respectively, and n is the number of samples (pixels) in each variable (or band) after pre-processing. The band correlation data was stored as a matrix for future access. Subsequently, Average Band Correlation (ABC) is computed. The ABC for band i is defined as the mean of the absolute correlation of band i (Bi) with band j (Bj ), where j varies from 1 to N and $$ \(j \neq i\) $$.
-$$
+'''
+
+where Xi and Yi are the individual samples and $$ \bar{X} $$ and $$ \bar{Y} $$ are the mean values of variables X and Y respectively, and n is the number of samples (pixels) in each variable (or band) after pre-processing. The band correlation data was stored as a matrix for future access. Subsequently, Average Band Correlation (ABC) is computed. The ABC for band i is defined as the mean of the absolute correlation of band i (Bi) with band j (Bj ), where j varies from 1 to N and $$ \(j \neq i\) $$.\
+
+'''math
 \text{ABC}_i = \frac{1}{N-1} \sum_{j=1, j \neq i}^{N} \left| r_{B_i, B_j} \right| (2)
-$$
+'''
+
 where r(Bi, Bj ) represents the correlation coefficient between Bi and Bj , and | · | denotes the absolute value. This process is repeated for each Bi, where i ∈ {1, . . . , N }. We experimentally set a threshold of 0.65 for the average band correlation (ABC). Bands with ABC less than the threshold were selected and, these selected bands were then extracted from the datasets. This approach allowed us to isolate and retain bands that exhibited lower inter-band dependencies, ensuring that the retained bands provided diverse and nonredundant information.
