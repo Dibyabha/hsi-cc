@@ -23,6 +23,7 @@ In our work, we have used two publicly available datasets: Pavia University and 
 After downloading, in the directory create two folders: Dataset and Figures.
 The overview of the directory structure should be:
 
+
 -**Dataset** : Contains the downloaded datasets (in .mat format) along with ground truths
 
 -**Figures** : Includes the generated figures and plots
