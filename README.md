@@ -10,11 +10,26 @@ The proposed work computes band correlation using Correlation Coefficient (CC) t
 
 ![Formula](https://latex.codecogs.com/png.image?\dpi{110}\bg{white}&space;r_{XY}=\frac{\sum_{i=1}^{n}(X_i-\bar{X})(Y_i-\bar{Y})}{\sqrt{\sum_{i=1}^{n}(X_i-\bar{X})^2\sum_{i=1}^{n}(Y_i-\bar{Y})^2}})
 
-where Xi and Yi are the individual samples and $\bar{X}$ and $\bar{Y}$ are the mean values of variables X and Y respectively, and n is the number of samples (pixels) in each variable (or band) after pre-processing. The band correlation data was stored as a matrix for future access. Subsequently, Average Band Correlation (ABC) is computed. The ABC for band i is defined as the mean of the absolute correlation of band i (Bi) with band j (Bj ), where j varies from 1 to N and j!=i.
+where Xi and Yi are the individual samples and $\bar{X}$ and $\bar{Y}$ are the mean values of variables X and Y respectively, and n is the number of samples (pixels) in each variable (or band) after pre-processing. The band correlation data was stored as a matrix for future access. Subsequently, Average Band Correlation (ABC) is computed. The ABC for band i is defined as the mean of the absolute correlation of band i ($B_i$) with band j ($B_j$), where j varies from 1 to N and j!=i
 
 ![Formula](https://latex.codecogs.com/png.image?\dpi{110}\bg{white}\text{ABC}_i=\frac{1}{N-1}\sum_{j=1,j\neq&space;i}^{N}\left|r_{B_i,B_j}\right|)
 
-where r(Bi, Bj ) represents the correlation coefficient between Bi and Bj , and | · | denotes the absolute value. This process is repeated for each Bi, where i ∈ {1, . . . , N }. We experimentally set a threshold of 0.65 for the average band correlation (ABC). Bands with ABC less than the threshold were selected and, these selected bands were then extracted from the datasets. This approach allowed us to isolate and retain bands that exhibited lower inter-band dependencies, ensuring that the retained bands provided diverse and nonredundant information.
+where $r_{B_i, B_j}$ represents the correlation coefficient between $B_i$ and $B_j$ , and | · | denotes the absolute value. This process is repeated for each $B_i$, where i ∈ {1, . . . , N }. We experimentally set a threshold of 0.65 for the average band correlation (ABC). Bands with ABC less than the threshold were selected and, these selected bands were then extracted from the datasets. This approach allowed us to isolate and retain bands that exhibited lower inter-band dependencies, ensuring that the retained bands provided diverse and nonredundant information.
+
+# Usage
+## Load Data
+
+In our work, we have used two publicly available datasets: Pavia University and Salinas Valley. To download the datasets, go to the link https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes.
+After downloading, in the directory create two folders: Dataset and Figures.
+The overview of the directory structure should be:
+
+-**Dataset** : Contains the downloaded datasets (in .mat format) along with ground truths
+-**Figures** : Includes the generated figures and plots
+  -**PA** : For Pavia University
+  -**SA** : For Salinas Valley
+
+
+
 
 # Support
 Feel free to contact : dibyabhadeb@gmail.com
