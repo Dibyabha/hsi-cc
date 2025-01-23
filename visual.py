@@ -30,7 +30,8 @@ def plot_ran_band(n, x):
     plt.imshow(img, cmap = 'jet')
     plt.colorbar(label = 'Reflectance')
     plt.title(f'Band id {band}')
-    plt.savefig(f'Figures/Band/PA/{band}id', bbox_inches = 'tight')
+    plt.savefig(f'Figures/PA/{band}id', bbox_inches = 'tight')
+    # plt.savefig(f'Figures/SA/{band}id', bbox_inches = 'tight')
     plt.show()
   return 0
 
@@ -51,7 +52,8 @@ def plot_gt(y):
   plt.imshow(y, cmap = custom)
   plt.colorbar(ticks = range(num), label = 'Class Labels')
   plt.title('Pavia University Ground Truth')
-  plt.savefig('Figures/Band/PA/gt', bbox_inches = 'tight')
+  plt.savefig('Figures/PA/gt', bbox_inches = 'tight')
+  # plt.savefig(f'Figures/SA/gt', bbox_inches = 'tight')
   plt.show()
   return 0
 
@@ -66,7 +68,8 @@ def plot_corr(x):
   plt.title('Correlation')
   plt.xlabel('Bands')
   plt.ylabel('Bands')
-  plt.savefig('Figures/Band/PA/corr', bbox_inches = 'tight')
+  plt.savefig('Figures/PA/corr', bbox_inches = 'tight')
+  # plt.savefig('Figures/SA/corr', bbox_inches = 'tight')
   plt.show()
   return 0
   
