@@ -19,17 +19,29 @@ where $r_{B_i, B_j}$ represents the correlation coefficient between $B_i$ and $B
 # Usage
 ## Load Data
 
-In our work, we have used two publicly available datasets: Pavia University and Salinas Valley. To download the datasets, go to the link https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes.
+In our work, we have used two publicly available datasets: Pavia University and Salinas Valley. To download the datasets, go to the link [Link](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes).
 After downloading, in the directory create two folders: Dataset and Figures.
 The overview of the directory structure should be:
 
 -**Dataset** : Contains the downloaded datasets (in .mat format) along with ground truths
+
 -**Figures** : Includes the generated figures and plots
+
   -**PA** : For Pavia University
+  
   -**SA** : For Salinas Valley
 
+## Execute the Band Selection Process
 
+To execute the files, follow these steps:
 
+1. Run visual.py
+
+2. Run corr.py
+
+3. Run prop.py
+
+Additionally, if needed run pca.py
 
 # Support
 Feel free to contact : dibyabhadeb@gmail.com
