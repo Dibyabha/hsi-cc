@@ -16,6 +16,6 @@ where Xi and Yi are the individual samples and $$ \bar{X} $$ and $$ \bar{Y} $$ a
 
 $$
 \text{ABC}_i = \frac{1}{N-1} \sum_{j=1, j \neq i}^{N} \left| r_{B_i, B_j} \right| (2)
-$
+$$
 
 where r(Bi, Bj ) represents the correlation coefficient between Bi and Bj , and | · | denotes the absolute value. This process is repeated for each Bi, where i ∈ {1, . . . , N }. We experimentally set a threshold of 0.65 for the average band correlation (ABC). Bands with ABC less than the threshold were selected and, these selected bands were then extracted from the datasets. This approach allowed us to isolate and retain bands that exhibited lower inter-band dependencies, ensuring that the retained bands provided diverse and nonredundant information.
