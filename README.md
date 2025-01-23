@@ -11,7 +11,7 @@ The proposed work computes band correlation using Correlation Coefficient (CC) t
 '''math
 r_{XY} = \frac{\sum_{i=1}^{n} (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^{n} (X_i - \bar{X})^2\sum_{i=1}^{n} (Y_i - \bar{Y})^2}}  (1)
 '''
-
+$E = mc^2$
 where Xi and Yi are the individual samples and $$ \bar{X} $$ and $$ \bar{Y} $$ are the mean values of variables X and Y respectively, and n is the number of samples (pixels) in each variable (or band) after pre-processing. The band correlation data was stored as a matrix for future access. Subsequently, Average Band Correlation (ABC) is computed. The ABC for band i is defined as the mean of the absolute correlation of band i (Bi) with band j (Bj ), where j varies from 1 to N and $$ \(j \neq i\) $$.\
 
 '''math
