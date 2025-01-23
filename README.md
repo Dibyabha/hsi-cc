@@ -23,14 +23,21 @@ In our work, we have used two publicly available datasets: Pavia University and 
 After downloading, in the directory create two folders: Dataset and Figures.
 The overview of the directory structure should be:
 
+<pre>
+HSI
+├── Dataset
+└── Figures
+    ├── PA
+    └── SA
+</pre>
 
--**Dataset** : Contains the downloaded datasets (in .mat format) along with ground truths
+**Dataset** : Contains the downloaded datasets (in .mat format) along with ground truths
 
--**Figures** : Includes the generated figures and plots
+**Figures** : Includes the generated figures and plots
 
-  -**PA** : For Pavia University
+**PA** : For Pavia University
   
-  -**SA** : For Salinas Valley
+**SA** : For Salinas Valley
 
 ## Execute the Band Selection Process
 
