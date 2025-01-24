@@ -73,7 +73,7 @@ bands = x.shape[0]
 t = 0.65
 list_band = []
 for i in range(bands):
-    row = data[i,:].astype(float)
+    row = x[i, :].astype(float)
     
     if row <= t:
         list_band.append(i)
