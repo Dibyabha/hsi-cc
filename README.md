@@ -53,3 +53,17 @@ Additionally, if needed run pca.py
 
 # Support
 Feel free to contact : dibyabhadeb@gmail.com
+
+# Citations
+Cite our paper
+'''bibtex
+@misc{deb2025correlationbasedbandselectionhyperspectral,
+      title={Correlation-Based Band Selection for Hyperspectral Image Classification}, 
+      author={Dibyabha Deb and Ujjwal Verma},
+      year={2025},
+      eprint={2501.14338},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.14338}, 
+}
+'''
