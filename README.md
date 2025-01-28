@@ -56,7 +56,7 @@ Feel free to contact : dibyabhadeb@gmail.com
 
 # Citations
 Cite our paper
-'''bibtex
+<pre><code>
 @misc{deb2025correlationbasedbandselectionhyperspectral,
       title={Correlation-Based Band Selection for Hyperspectral Image Classification}, 
       author={Dibyabha Deb and Ujjwal Verma},
@@ -66,4 +66,4 @@ Cite our paper
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2501.14338}, 
 }
-'''
+</code></pre>
